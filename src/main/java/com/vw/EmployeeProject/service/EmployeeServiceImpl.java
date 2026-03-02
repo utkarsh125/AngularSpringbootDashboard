@@ -58,22 +58,22 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     private EmployeeDto mapToDto(Employee e) {
-        return EmployeeDto.builder()
-                .id(e.getId())
-                .firstName(e.getFirstName())
-                .lastName(e.getLastName())
-                .email(e.getEmail())
-                .department(e.getDepartment())
-                .build();
+        return new EmployeeDto(
+                e.getId(),
+                e.getFirstName(),
+                e.getLastName(),
+                e.getEmail(),
+                e.getDepartment()
+        );
     }
 
     private Employee mapToEntity(EmployeeDto dto) {
-        return Employee.builder()
-                .id(dto.getId())
-                .firstName(dto.getFirstName())
-                .lastName(dto.getLastName())
-                .email(dto.getEmail())
-                .department(dto.getDepartment())
-                .build();
+        return new Employee(
+                dto.getId(),
+                dto.getFirstName(),
+                dto.getLastName(),
+                dto.getEmail(),
+                dto.getDepartment()
+        );
     }
 }
