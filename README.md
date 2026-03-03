@@ -10,7 +10,7 @@ The backend uses Springboot auth-configuration and an embedded server to simplif
 
 ## Architecture
 
-The application follows a layered architecture where each layer has a specific responsibility. The `controller` layer handles HTTP requests and responses. The service layer contains the business logic of the application. The repository layer manages database access and interacts with the persistence layer through Spring Data JPA. The model layer defines the entity that is mapped to the database table. The DTO layer ensures that only controlled data is transferred between the backend and the client. The exception layer provides centralized error handling to return appropriate HTTP responses.
+The application follows a layered architecture where each layer has a specific responsibility. The `controller` layer handles HTTP requests and responses. The `service` layer contains the business logic of the application. The `repository` layer manages database access and interacts with the persistence layer through Spring Data JPA. The `model` layer defines the entity that is mapped to the database table. The `DTO` layer ensures that only controlled data is transferred between the backend and the client. The `exception` layer provides centralized error handling to return appropriate HTTP responses.
 
 This architecture improves modularity, maintainability, and scalability while adhering to **SOLID Design Principles**.
 
